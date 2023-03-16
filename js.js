@@ -5,7 +5,18 @@ const elmMenu =document.querySelector('.head').querySelector('.menu');
 const elmSearch=document.querySelector('.head').querySelector('.search-cart');
 const elmFt = document.querySelector('.ft-sort').querySelector('ul');
 
+const header = document.getElementsByTagName('header')[0];
+const  headerHeight=header.offsetHeight;
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction(){
+    if(document.body.scrollTop > headerHeight || document.documentElement.scrollTop > headerHeight){
+        header.classList.add('fixed');
+    }else{
+        header.classList.remove('fixed');
+
+    }
+}
 
 function searchClick(){
     search.style.display='block';

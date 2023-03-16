@@ -24,7 +24,7 @@ window.addEventListener("load",function(){
     
     if(dir===1){
         index++;
-        console.log(index)
+        
         if(index >= sliderLenght){
             index=0;
             postionX=0;
